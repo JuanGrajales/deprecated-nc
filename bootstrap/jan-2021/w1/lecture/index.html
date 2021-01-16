@@ -8,9 +8,13 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Week 1 Lecture</title>
   </head>
   <body>
+    <h1>Are you on Slack?</h1>
+    <!-- Send slide deck, announcement, GitHub Repo  -->
+
     <h2>Must haves</h2>
     <ul>
       <li>VS Code</li>
@@ -41,10 +45,17 @@
 
     <h2>Bash</h2>
     <ul>
-      <li>ls</li>
-      <li>cd directory</li>
-      <li>cd ..</li>
-      <li>mkdir</li>
+      <li>
+        $ ls - list the files and folders available in the current directory
+        (i.e. folder)
+      </li>
+      <li>$ cd(change directory) directory</li>
+      <li>$ cd .. - go back one directory</li>
+      <li>$ mkdir(make directory) directory-name</li>
+      <li>$ clear - clear your terminal</li>
+      <li>$ pwd - print working directory</li>
+      <li>$ rm filename - to remove a file</li>
+      <li>$ rm -rf directory-name - to remove a directory</li>
     </ul>
 
     <h2>Mobile-First & Responsive Web Design</h2>
@@ -58,6 +69,7 @@
       <li>create a directory for your project</li>
       <li>navigate to directory using terminal</li>
       <li>$ npm init -y</li>
+      <li>$ code . (to open directory to VS Code)</li>
       <li>$ npm i lite-server@2.5.4 --save-dev</li>
       <li>$ npm i jquery@3.5.1 popper.js@1.16.1</li>
       <li>$ npm i bootstrap@4.5.2</li>
@@ -66,15 +78,31 @@
         "start": "npm run lite", "test": "echo \"Error: no test specified\" &&
         exit 1" },
       </li>
+      <li>
+        Make sure you are in the correct directory in the terminal. Create
+        index.html file using $ code index.html
+      </li>
+      <li>
+        Inside the index.html file type "!" then enter to setup basic html file
+      </li>
       <li>viewport meta tag</li>
       <li>link Bootstrap CSS file</li>
       <li>link scripts for jquery, popper, bootstrap</li>
+      <li>run $ npm start</li>
     </ul>
 
     <h2>bootstrap.css file... for the curious ones :D</h2>
+    <ul>
+      <li>go to the node_modules</li>
+      <li>find the bootstrap directory</li>
+      <li>find the dist directory</li>
+      <li>find the css directory</li>
+      <li>find the bootstrap.css file</li>
+    </ul>
 
     <!-- Bootstrap Grid System -->
-    <div class="container-fluid" style="border: solid 5px red">
+    <div class="container" style="border: solid 5px red">
+      <!-- Row 1 -->
       <div class="row" style="border: solid 5px blue">
         <div class="col" style="border: solid 5px greenyellow">
           content always goes inside div with col class
@@ -106,7 +134,7 @@
 
     <!-- Buttons -->
     <br /><br />
-    <button class="">Style me</button>
+    <button class="btn btn-outline-warning">Style me</button>
     <br /><br />
 
     <!-- Order-* Classes -->
@@ -123,7 +151,7 @@
         <div class="col order-4" style="border: solid 5px greenyellow">
           Column 3 Row 1
         </div>
-        <div class="col order-3" style="border: solid 5px greenyellow">
+        <div class="col" style="border: solid 5px greenyellow">
           Column 4 Row 1
         </div>
       </div>
@@ -153,11 +181,40 @@
 
     <!-- Alignment Classes -->
     <!-- align-items-center -->
-
+    <!-- align-self-center -->
     <!-- text-center -->
     <div class="container" style="border: solid 5px red">
       <div
         class="row align-items-center"
+        style="border: solid 5px blue; height: 200px"
+      >
+        <div
+          class="col"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 1 Row 1
+        </div>
+        <div
+          class="col"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 2 Row 1
+        </div>
+        <div
+          class="col"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 3 Row 1
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- if using container-fluid class must use row d-flex align-items-center classes for the row div -->
+    <div class="container-fluid" style="border: solid 5px red">
+      <div
+        class="row d-flex align-items-center"
         style="border: solid 5px blue; height: 200px"
       >
         <div
@@ -180,9 +237,10 @@
         </div>
       </div>
     </div>
+
     <br /><br />
 
-    <!-- align-self-center -->
+    <!-- align-self-center can be used with container or container-fluid -->
     <div class="container" style="border: solid 5px red">
       <div class="row" style="border: solid 5px blue; height: 200px">
         <div
@@ -209,6 +267,11 @@
     <!-- Adding custom styles -->
 
     <br /><br />
+
+    <script>
+      // shortcuts
+      // create multiple html elements - tagname*number (e.g. li*5)
+    </script>
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
