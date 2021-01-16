@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Week 1 Lecture</title>
+  </head>
+  <body>
+    <h2>Must haves</h2>
+    <ul>
+      <li>VS Code</li>
+      <li>Nucamp folder</li>
+      <li>Terminal</li>
+      <li>Git</li>
+      <li>Node</li>
+      <li>Slack</li>
+    </ul>
+
+    <h2>Git</h2>
+    <ul>
+      <li>git add .</li>
+      <li>git commit -m "message about your code"</li>
+      <li>git push</li>
+    </ul>
+
+    <h2>Node/NPM</h2>
+    <ul>
+      <li>How do you create package.json file?</li>
+      <li>What is the purpose of package.json?</li>
+    </ul>
+
+    <h2>VS Code Integrated Terminal</h2>
+    <ul>
+      <li>mac: control + `</li>
+    </ul>
+
+    <h2>Bash</h2>
+    <ul>
+      <li>ls</li>
+      <li>cd directory</li>
+      <li>cd ..</li>
+      <li>mkdir</li>
+    </ul>
+
+    <h2>Mobile-First & Responsive Web Design</h2>
+    <ul>
+      <li>What does mobile-first design mean?</li>
+      <li>What does responsive web design mean?</li>
+    </ul>
+
+    <h2>Bootstrap Setup</h2>
+    <ul>
+      <li>create a directory for your project</li>
+      <li>navigate to directory using terminal</li>
+      <li>$ npm init -y</li>
+      <li>$ npm i lite-server@2.5.4 --save-dev</li>
+      <li>$ npm i jquery@3.5.1 popper.js@1.16.1</li>
+      <li>$ npm i bootstrap@4.5.2</li>
+      <li>
+        Edit scripts in package.json with: "scripts": { "lite": "lite-server",
+        "start": "npm run lite", "test": "echo \"Error: no test specified\" &&
+        exit 1" },
+      </li>
+      <li>viewport meta tag</li>
+      <li>link Bootstrap CSS file</li>
+      <li>link scripts for jquery, popper, bootstrap</li>
+    </ul>
+
+    <h2>bootstrap.css file... for the curious ones :D</h2>
+
+    <!-- Bootstrap Grid System -->
+    <div class="container-fluid" style="border: solid 5px red">
+      <div class="row" style="border: solid 5px blue">
+        <div class="col" style="border: solid 5px greenyellow">
+          content always goes inside div with col class
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- Breakpoints -->
+    <div class="container-fluid" style="border: solid 5px red">
+      <div class="row" style="border: solid 5px blue">
+        <div
+          class="col-sm-1 col-md-3 col-lg-8"
+          style="border: solid 5px greenyellow"
+        >
+          content always goes inside div with col class
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <div class="container-fluid" style="border: solid 5px red">
+      <div class="row" style="border: solid 5px blue">
+        <div class="col-3" style="border: solid 5px greenyellow">
+          content always goes inside div with col class
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <br /><br />
+    <button class="">Style me</button>
+    <br /><br />
+
+    <!-- Order-* Classes -->
+    <!-- order-1 - order-12 -->
+    <!-- order-breakpoint-first & order-breakpoint-last -->
+    <div class="container-fluid" style="border: solid 5px red">
+      <div class="row" style="border: solid 5px blue">
+        <div class="col order-2" style="border: solid 5px greenyellow">
+          Column 1 Row 1
+        </div>
+        <div class="col order-1" style="border: solid 5px greenyellow">
+          Column 2 Row 1
+        </div>
+        <div class="col order-4" style="border: solid 5px greenyellow">
+          Column 3 Row 1
+        </div>
+        <div class="col order-3" style="border: solid 5px greenyellow">
+          Column 4 Row 1
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- Offset-* Classes -->
+    <!-- offset-* -->
+    <!-- offset-breakpoint-* -->
+    <div class="container-fluid" style="border: solid 5px red">
+      <div class="row" style="border: solid 5px blue">
+        <div class="col offset-1" style="border: solid 5px greenyellow">
+          Column 1 Row 1
+        </div>
+        <div class="col" style="border: solid 5px greenyellow">
+          Column 2 Row 1
+        </div>
+        <div class="col" style="border: solid 5px greenyellow">
+          Column 3 Row 1
+        </div>
+        <div class="col" style="border: solid 5px greenyellow">
+          Column 4 Row 1
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- Alignment Classes -->
+    <!-- align-items-center -->
+
+    <!-- text-center -->
+    <div class="container" style="border: solid 5px red">
+      <div
+        class="row align-items-center"
+        style="border: solid 5px blue; height: 200px"
+      >
+        <div
+          class="col"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 1 Row 1
+        </div>
+        <div
+          class="col text-center"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 2 Row 1
+        </div>
+        <div
+          class="col align-self-center"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 3 Row 1
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- align-self-center -->
+    <div class="container" style="border: solid 5px red">
+      <div class="row" style="border: solid 5px blue; height: 200px">
+        <div
+          class="col"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 1 Row 1
+        </div>
+        <div
+          class="col text-center"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 2 Row 1
+        </div>
+        <div
+          class="col align-self-center"
+          style="border: solid 5px greenyellow; height: 100px; width: 100px"
+        >
+          Column 3 Row 1
+        </div>
+      </div>
+    </div>
+
+    <!-- Adding custom styles -->
+
+    <br /><br />
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

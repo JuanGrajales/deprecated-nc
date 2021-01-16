@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Setup Steps</title>
+  </head>
+  <body>
+    <ol>
+      <h3>Setup directory and package.json</h3>
+      <li>Create nucampsite directory in bootstrap directory</li>
+      <li>Inside nucampsite directory run $ npm init -y</li>
+      <h3>Install dependencies</h3>
+      <li>
+        Inside nucampsite directory run
+        <br />$ npm i lite-server@2.5.4 --save-dev <br />$ npm i jquery@3.5.1
+        popper.js@1.16.1 <br />$ npm i bootstrap@4.5.2
+      </li>
+      <h3>Modify package.json</h3>
+      <li>
+        Edit package.json file with the following: <br />"description": "This is
+        a website for the fictional campsites review site NuCamp.", "main":
+        "index.html", "scripts": { "lite": "lite-server", "start": "npm run
+        lite", "test": "echo \"Error: no test specified\" && exit 1" },
+      </li>
+      <h3>Create homepage</h3>
+      <li>Create an index.html file and add the code provided</li>
+      <li>
+        In your terminal find the location of the package.json file and run $
+        npm start
+      </li>
+      <h3>Add bootstrap</h3>
+      <li>Replace the HTML code in the head element</li>
+      <li>Add scripts provided under the footer element</li>
+      <h3>Option: Git</h3>
+      <li>Create a .gitignore file and add "node_modules"</li>
+    </ol>
+  </body>
+</html>
