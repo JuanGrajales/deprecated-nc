@@ -14,264 +14,214 @@
   <body>
     <h1>Are you on Slack?</h1>
     <!-- Send slide deck, announcement, schedule, GitHub Repo, calendly link   -->
+    <!-- GitHub - https://github.com/JuanGrajales/nc/tree/main/bootstrap/jan-2021/w2 
+    Calendly - https://calendly.com/juan-grajales/help -->
+    <br />
+    <br />
 
-    <h2>Must haves</h2>
-    <ul>
-      <li>VS Code</li>
-      <li>Nucamp folder</li>
-      <li>Terminal</li>
-      <li>Git</li>
-      <li>Node</li>
-      <li>Slack</li>
-    </ul>
+    <!-- ml-3 = 1rem = 16px (default) -->
+    <div class="">Slide to the right...</div>
 
-    <h2>Git</h2>
-    <ul>
-      <li>git add .</li>
-      <li>git commit -m "message about your code"</li>
-      <li>git push</li>
-    </ul>
+    <!-- p-5 = 3rem = 48px (default) -->
+    <div class="">Need my space...</div>
 
-    <h2>Node/NPM</h2>
-    <ul>
-      <li>How do you create package.json file?</li>
-      <li>What is the purpose of package.json?</li>
-    </ul>
+    <!-- py-1 = .25rem = 4px (default) -->
+    <div class="">Vertical vertigo...</div>
 
-    <h2>VS Code Integrated Terminal</h2>
-    <ul>
-      <li>mac: control + `</li>
-    </ul>
+    <!-- p-5 = 3rem = 48px (default) -->
+    <div class="">Need my space...</div>
 
-    <h2>Bash</h2>
-    <ul>
-      <li>
-        $ ls - list the files and folders available in the current directory
-        (i.e. folder)
-      </li>
-      <li>$ cd(change directory) directory</li>
-      <li>$ cd .. - go back one directory</li>
-      <li>$ mkdir(make directory) directory-name</li>
-      <li>$ clear - clear your terminal</li>
-      <li>$ pwd - print working directory</li>
-      <li>$ rm filename - to remove a file</li>
-      <li>$ rm -rf directory-name - to remove a directory</li>
-    </ul>
+    <!-- Learn to Google not to memorize! -->
 
-    <h2>Mobile-First & Responsive Web Design</h2>
-    <ul>
-      <li>What does mobile-first design mean?</li>
-      <li>What does responsive web design mean?</li>
-    </ul>
+    <br />
+    <br />
 
-    <h2>Bootstrap Setup</h2>
-    <ul>
-      <li>create a directory for your project</li>
-      <li>navigate to directory using terminal</li>
-      <li>$ npm init -y</li>
-      <li>$ code . (to open directory to VS Code)</li>
-      <li>$ npm i lite-server@2.5.4 --save-dev</li>
-      <li>$ npm i jquery@3.5.1 popper.js@1.16.1</li>
-      <li>$ npm i bootstrap@4.5.2</li>
-      <li>
-        Edit scripts in package.json with: "scripts": { "lite": "lite-server",
-        "start": "npm run lite", "test": "echo \"Error: no test specified\" &&
-        exit 1" },
-      </li>
-      <li>
-        Make sure you are in the correct directory in the terminal. Create
-        index.html file using $ code index.html
-      </li>
-      <li>
-        Inside the index.html file type "!" then enter to setup basic html file
-      </li>
-      <li>viewport meta tag</li>
-      <li>link Bootstrap CSS file</li>
-      <li>link scripts for jquery, popper, bootstrap</li>
-      <li>run $ npm start</li>
-    </ul>
-
-    <h2>bootstrap.css file... for the curious ones :D</h2>
-    <ul>
-      <li>go to the node_modules</li>
-      <li>find the bootstrap directory</li>
-      <li>find the dist directory</li>
-      <li>find the css directory</li>
-      <li>find the bootstrap.css file</li>
-    </ul>
-
-    <!-- Bootstrap Grid System -->
-    <div class="container" style="border: solid 5px red">
-      <!-- Row 1 -->
-      <div class="row" style="border: solid 5px blue">
-        <div class="col" style="border: solid 5px greenyellow">
-          content always goes inside div with col class
-        </div>
+    <!-- Box Model Review -->
+    <div style="background-color: yellow; width: 400px; height: 400px">
+      Margin
+      <div
+        style="
+          background-color: red;
+          border: blueviolet 5px solid;
+          width: 200px;
+          height: 200px;
+          margin: 100px;
+          padding: 75px;
+        "
+      >
+        Content
       </div>
     </div>
-    <br /><br />
 
-    <!-- Breakpoints -->
-    <div class="container-fluid" style="border: solid 5px red">
-      <div class="row" style="border: solid 5px blue">
-        <div
-          class="col-sm-1 col-md-3 col-lg-8"
-          style="border: solid 5px greenyellow"
-        >
-          content always goes inside div with col class
-        </div>
-      </div>
-    </div>
-    <br /><br />
+    <br />
+    <br />
 
-    <div class="container-fluid" style="border: solid 5px red">
-      <div class="row" style="border: solid 5px blue">
-        <div class="col-3" style="border: solid 5px greenyellow">
-          content always goes inside div with col class
-        </div>
+    <!-- what does navbar-expand do? -->
+    <!-- What if we add a break point? -->
+    <!-- What if we take it off? -->
+    <!-- What is important about the data-target attribute? -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Brand</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
+
+    <br />
+    <br />
+
+    <!-- Breadcrumbs -->
+    <a href="https://www.bestbuy.com/">Bestbuy</a>
+    <br />
+    <a href="https://www.tmlewin.com/suits/slim-fit-suits/">TM Lewin</a>
+    <br />
+    <a href="">Path</a>
+
+    <br />
+    <br />
+
+    <!-- Pros of SVG Icons -->
+
+    <!-- Font Awesome is awesome -->
 
     <!-- Buttons -->
-    <br /><br />
-    <button class="btn btn-outline-warning">Style me</button>
-    <br /><br />
+    <button>Primary</button>
+    <button>Success</button>
+    <button>Danger</button>
+    <button>Warning</button>
 
-    <!-- Order-* Classes -->
-    <!-- order-1 - order-12 -->
-    <!-- order-breakpoint-first & order-breakpoint-last -->
-    <div class="container-fluid" style="border: solid 5px red">
-      <div class="row" style="border: solid 5px blue">
-        <div class="col order-2" style="border: solid 5px greenyellow">
-          Column 1 Row 1
-        </div>
-        <div class="col order-1" style="border: solid 5px greenyellow">
-          Column 2 Row 1
-        </div>
-        <div class="col order-4" style="border: solid 5px greenyellow">
-          Column 3 Row 1
-        </div>
-        <div class="col" style="border: solid 5px greenyellow">
-          Column 4 Row 1
-        </div>
-      </div>
-    </div>
-    <br /><br />
+    <!-- Bootstrap Social -->
 
-    <!-- Offset-* Classes -->
-    <!-- offset-* -->
-    <!-- offset-breakpoint-* -->
-    <div class="container-fluid" style="border: solid 5px red">
-      <div class="row" style="border: solid 5px blue">
-        <div class="col offset-1" style="border: solid 5px greenyellow">
-          Column 1 Row 1
-        </div>
-        <div class="col" style="border: solid 5px greenyellow">
-          Column 2 Row 1
-        </div>
-        <div class="col" style="border: solid 5px greenyellow">
-          Column 3 Row 1
-        </div>
-        <div class="col" style="border: solid 5px greenyellow">
-          Column 4 Row 1
-        </div>
-      </div>
-    </div>
-    <br /><br />
+    <br />
+    <br />
 
-    <!-- Alignment Classes -->
-    <!-- align-items-center -->
-    <!-- align-self-center -->
-    <!-- text-center -->
-    <div class="container" style="border: solid 5px red">
-      <div
-        class="row align-items-center"
-        style="border: solid 5px blue; height: 200px"
-      >
-        <div
-          class="col"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 1 Row 1
-        </div>
-        <div
-          class="col"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 2 Row 1
-        </div>
-        <div
-          class="col"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 3 Row 1
-        </div>
+    <!-- Forms -->
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Hello" />
       </div>
+    </form>
+
+    <br />
+    <br />
+
+    <!-- Tables -->
+    <!-- table-striped, table-bordered, table-sm, table-dark, table-hover -->
+    <!-- table-responsive -->
+    <div class="">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>row 1 col 1</td>
+            <td>row 1 col 2</td>
+            <td>row 1 col 3</td>
+          </tr>
+          <tr>
+            <td>row 2 col 1</td>
+            <td>row 2 col 2</td>
+            <td>row 2 col 3</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <br /><br />
+    <br />
+    <br />
 
-    <!-- if using container-fluid class must use row d-flex align-items-center classes for the row div -->
-    <div class="container-fluid" style="border: solid 5px red">
-      <div
-        class="row d-flex align-items-center"
-        style="border: solid 5px blue; height: 200px"
-      >
-        <div
-          class="col"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 1 Row 1
-        </div>
-        <div
-          class="col text-center"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 2 Row 1
-        </div>
-        <div
-          class="col align-self-center"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 3 Row 1
-        </div>
+    <!-- Cards -->
+    <a href="https://www.imdb.com/tv/">Example</a>
+
+    <div class="card" style="width: 18rem">
+      <img class="card-img-top" src="logo.png" alt="logo" />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque veniam
+          adipisci molestiae autem numquam excepturi maiores eius dolorem.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
+      <div class="card-footer">Foot notes</div>
     </div>
 
-    <br /><br />
+    <br />
+    <br />
 
-    <!-- align-self-center can be used with container or container-fluid -->
-    <div class="container" style="border: solid 5px red">
-      <div class="row" style="border: solid 5px blue; height: 200px">
-        <div
-          class="col"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 1 Row 1
-        </div>
-        <div
-          class="col text-center"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 2 Row 1
-        </div>
-        <div
-          class="col align-self-center"
-          style="border: solid 5px greenyellow; height: 100px; width: 100px"
-        >
-          Column 3 Row 1
-        </div>
-      </div>
+    <!-- Images -->
+    <!-- How can I fix the image? -->
+    <div style="width: 500px">
+      <img class="" src="im.jpg" alt="Ironman" />
     </div>
 
-    <!-- Adding custom styles -->
+    <br />
+    <br />
 
-    <br /><br />
+    <!-- Media Object -->
+    <img class="mr-3 img-fluid" src="im.jpg" alt="Ironman" />
+    <h5>Who is Ironman?</h5>
+    A billionaire industrialist and genius inventor, Tony Stark (Robert Downey
+    Jr.)
 
-    <script>
-      // shortcuts
-      // create multiple html elements - tagname*number (e.g. li*5)
-    </script>
+    <br />
+    <br />
+
+    <h3>Resources</h3>
+    <ul>
+      <li>
+        <a href="https://dribbble.com/shots/popular/web-design">Dribbble</a>
+      </li>
+      <li>
+        <a href="https://www.awwwards.com/websites/sites_of_the_year/"
+          >Awwwards</a
+        >
+      </li>
+      <li>
+        <a href="https://visme.co/blog/website-color-schemes/"></a>Color Schemes
+        Examples
+      </li>
+      <li>
+        <a href="https://colorhunt.co/palettes/popular">Color Palettes</a>
+      </li>
+      <li><a href="https://uigradients.com/#ServQuick">Gradients</a></li>
+      <li><a href="https://app.diagrams.net/">Wireframing</a></li>
+      <li><a href="https://thenounproject.com">Icons</a></li>
+      <li><a href="https://undraw.co/search">Illustrations</a></li>
+      <li>
+        <a
+          href="https://www.lapa.ninja/blog/free-illustrations-library-for-your-project/"
+          >Free Illustrations</a
+        >
+      </li>
+      <li><a href="https://www.codewars.com">Codewars</a></li>
+      <li><a href="https://www.hackerrank.com">Hackerrank</a></li>
+      <li><a href="https://leetcode.com">Leetcode</a></li>
+    </ul>
+
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
