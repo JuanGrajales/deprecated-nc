@@ -20,16 +20,24 @@
     <br />
 
     <!-- ml-3 = 1rem = 16px (default) -->
-    <div class="">Slide to the right...</div>
+    <div class="ml-3">Slide to the right...</div>
 
     <!-- p-5 = 3rem = 48px (default) -->
-    <div class="">Need my space...</div>
+    <div class="p-5" style="background-color: red">Need my space...</div>
 
     <!-- py-1 = .25rem = 4px (default) -->
-    <div class="">Vertical vertigo...</div>
+    <div class="py-3" style="background-color: lightblue">
+      Vertical vertigo...
+    </div>
 
-    <!-- p-5 = 3rem = 48px (default) -->
-    <div class="">Need my space...</div>
+    <!-- mx-auto  -->
+    <div style="background-color: lightcoral">
+      <span
+        class="mx-auto"
+        style="width: 400px; display: block; background-color: lightcyan"
+        >Front and center...</span
+      >
+    </div>
 
     <!-- Learn to Google not to memorize! -->
 
@@ -49,18 +57,19 @@
           padding: 75px;
         "
       >
-        Content
+        padding
+        <span class="bg-info">Content</span>
       </div>
     </div>
 
     <br />
     <br />
 
-    <!-- what does navbar-expand do? -->
+    <!-- what does navbar-expand do? it displays all the links horizontally instead of showing a hamburger menu with the links. To make it responsive add a breakpoint to the end (e.g. navbar-expand-md will only show the links horizontally when the size of the window is medium or more )-->
     <!-- What if we add a break point? -->
-    <!-- What if we take it off? -->
+    <!-- What if we take navbar-expand off? -->
     <!-- What is important about the data-target attribute? -->
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Brand</a>
       <button
         class="navbar-toggler"
@@ -89,11 +98,11 @@
     <br />
 
     <!-- Breadcrumbs -->
-    <a href="https://www.bestbuy.com/">Bestbuy</a>
+    <a href="https://www.bestbuy.com/">Bestbuy - example of location</a>
     <br />
     <a href="https://www.tmlewin.com/suits/slim-fit-suits/">TM Lewin</a>
     <br />
-    <a href="">Path</a>
+    <a href="#">Path</a>
 
     <br />
     <br />
@@ -103,10 +112,10 @@
     <!-- Font Awesome is awesome -->
 
     <!-- Buttons -->
-    <button>Primary</button>
-    <button>Success</button>
-    <button>Danger</button>
-    <button>Warning</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-warning">Warning</button>
 
     <!-- Bootstrap Social -->
 
@@ -116,8 +125,13 @@
     <!-- Forms -->
     <form>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Hello" />
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          placeholder="Hello"
+        />
       </div>
+      <input type="text" name="" id="" />
     </form>
 
     <br />
@@ -126,10 +140,19 @@
     <!-- Tables -->
     <!-- table-striped, table-bordered, table-sm, table-dark, table-hover -->
     <!-- table-responsive -->
-    <div class="">
-      <table class="table">
+    <div class="table-responsive">
+      <table class="table table-dark">
         <thead>
           <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
             <th>Column 1</th>
             <th>Column 2</th>
             <th>Column 3</th>
@@ -145,6 +168,11 @@
             <td>row 2 col 1</td>
             <td>row 2 col 2</td>
             <td>row 2 col 3</td>
+          </tr>
+          <tr>
+            <td>row 3 col 1</td>
+            <td>row 3 col 2</td>
+            <td>row 3 col 3</td>
           </tr>
         </tbody>
       </table>
@@ -166,7 +194,72 @@
         </p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-      <div class="card-footer">Foot notes</div>
+      <!-- <div class="card-footer">Foot notes</div> -->
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img class="card-img-top" src="logo.png" alt="logo" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+                veniam adipisci molestiae autem numquam excepturi maiores eius
+                dolorem.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <!-- <div class="card-footer">Foot notes</div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img class="card-img-top" src="logo.png" alt="logo" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+                veniam adipisci molestiae autem numquam excepturi maiores eius
+                dolorem.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <!-- <div class="card-footer">Foot notes</div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img class="card-img-top" src="logo.png" alt="logo" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+                veniam adipisci molestiae autem numquam excepturi maiores eius
+                dolorem.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <!-- <div class="card-footer">Foot notes</div> -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img class="card-img-top" src="logo.png" alt="logo" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+                veniam adipisci molestiae autem numquam excepturi maiores eius
+                dolorem.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <!-- <div class="card-footer">Foot notes</div> -->
+          </div>
+        </div>
+      </div>
     </div>
 
     <br />
@@ -175,17 +268,21 @@
     <!-- Images -->
     <!-- How can I fix the image? -->
     <div style="width: 500px">
-      <img class="" src="im.jpg" alt="Ironman" />
+      <img class="img-fluid" src="im.jpg" alt="Ironman" />
     </div>
 
     <br />
     <br />
 
     <!-- Media Object -->
-    <img class="mr-3 img-fluid" src="im.jpg" alt="Ironman" />
-    <h5>Who is Ironman?</h5>
-    A billionaire industrialist and genius inventor, Tony Stark (Robert Downey
-    Jr.)
+    <div class="media">
+      <div class="media-body">
+        <h5>Who is Ironman?</h5>
+        A billionaire industrialist and genius inventor, Tony Stark (Robert
+        Downey Jr.)
+      </div>
+      <img class="ml-3 img-fluid" src="im.jpg" alt="Ironman" />
+    </div>
 
     <br />
     <br />
@@ -196,13 +293,15 @@
         <a href="https://dribbble.com/shots/popular/web-design">Dribbble</a>
       </li>
       <li>
-        <a href="https://www.awwwards.com/websites/sites_of_the_year/"
+        <a
+          href="https://www.awwwards.com/awwwards/collections/freelance-portfolio/"
           >Awwwards</a
         >
       </li>
       <li>
-        <a href="https://visme.co/blog/website-color-schemes/"></a>Color Schemes
-        Examples
+        <a href="https://visme.co/blog/website-color-schemes/"
+          >Color Schemes Examples</a
+        >
       </li>
       <li>
         <a href="https://colorhunt.co/palettes/popular">Color Palettes</a>
@@ -217,6 +316,7 @@
           >Free Illustrations</a
         >
       </li>
+      <li><a href="https://www.pablostanley.com/">Pablo Stanley</a></li>
       <li><a href="https://www.codewars.com">Codewars</a></li>
       <li><a href="https://www.hackerrank.com">Hackerrank</a></li>
       <li><a href="https://leetcode.com">Leetcode</a></li>
