@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Week 3 Lecture</title>
+  </head>
+  <body>
+    <h1>Are you on Slack?</h1>
+    <!-- Send slide deck, announcement, schedule, GitHub Repo, calendly link   -->
+    <!-- GitHub - https://github.com/JuanGrajales/nc/tree/main/bootstrap/jan-2021/w3 
+    Calendly - https://calendly.com/juan-grajales/help -->
+    <br />
+    <br />
+
+    <h3 data-juan="value">HTML data-* Attribute</h3>
+
+    <br />
+    <br />
+
+    <a
+      href="https://getbootstrap.com/docs/4.5/components/navs/#javascript-behavior"
+      ><h3>Tabs</h3></a
+    >
+    <!-- to make a tab create a ul with each li being a tab
+    then outside of the ul create a parent div with multiple child divs and each div with be the content of the tab. **make sure div content id matches href for the li tab link -->
+
+    <ul class="nav nav-tabs" id="myTab">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
+          >Profile</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact"
+          >Contact</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact2"
+          >Contact2</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home">Home Content</div>
+      <div class="tab-pane fade" id="profile">Profile Content</div>
+      <div class="tab-pane fade" id="contact">Contact Content</div>
+      <div class="tab-pane fade" id="contact2">Contact2 Content</div>
+    </div>
+
+    <br />
+    <br />
+
+    <a
+      href="https://getbootstrap.com/docs/4.5/components/collapse/#accordion-example"
+    >
+      <h3>Collapse and Accordion</h3></a
+    >
+
+    <!-- 
+      div class=accordion id=parentID
+        div
+          button data-toggle=collapse data-target=content1
+          div for content data-parent=parentID id=content1
+        /div
+
+        div
+          button
+          div for content
+        /div
+
+        div
+          button
+          div for content
+        /div
+      /div#accordion
+     -->
+
+    <!-- 
+      comment shortcut: command + / 
+    for windows control + / 
+  -->
+    <div class="accordion" id="accordionExample">
+      <div>
+        <button
+          class="btn btn-link btn-block text-left"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseOne"
+        >
+          Collapsible Group Item #1
+        </button>
+
+        <div
+          id="collapseOne"
+          class="collapse show"
+          data-parent="#accordionExample"
+        >
+          Content 1
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Collapsible Group Item #2
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">Content 2</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Collapsible Group Item #3
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">Content 3</div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <a href="https://getbootstrap.com/docs/4.0/components/tooltips/#examples"
+      ><h3>Tooltips</h3></a
+    >
+    <h5>Make sure to activate the tooltip with JS script</h5>
+
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="Tooltip message"
+      data-trigger="hover"
+    >
+      Hover is default
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Tooltip message"
+      data-trigger="click"
+    >
+      Click tooltip
+    </button>
+
+    <br />
+    <br />
+
+    <a href="https://getbootstrap.com/docs/4.0/components/modal/#live-demo">
+      <h3>Modals</h3></a
+    >
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      Modal
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <img src="./im.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h3>Carousel</h3>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="5000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">Slide 1</div>
+        <div class="carousel-item">SLide 2</div>
+        <div class="carousel-item">SLide 3</div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <script>
+      // 8 Data Types
+      // Number
+      let num = 356789;
+      let age = 23;
+
+      // String
+      let str = "hello class, 12345, ^&*()_";
+      let firstname = "Juan";
+
+      // Boolean
+      let tr = true;
+      let fa = false;
+      let alumni = false;
+
+      // Undefined
+
+      // Null, Object, Symbol, BigInt
+
+      // Keywords for declaring a variable: var, let, const
+      // Variable Declaration
+      let newVar;
+      console.log(newVar);
+
+      // Variable Initialization
+      newVar = 4;
+      console.log(newVar);
+
+      // Variable Assignment (= , +=, -=, *=, and /= )
+      newVar = newVar + 1;
+      newVar += 1;
+      newVar++;
+      console.log(newVar);
+
+      // Variable Declaration & Initialization
+      let num2 = 11;
+      console.log(num2);
+
+      // False values: 0, "", undefined, null, NaN
+
+      // Truth values: everything that is not false
+
+      // If / ElseIf / Else
+      let age2 = 60;
+      if (age2 < 3) {
+        console.log(`Free`);
+      } else if (age2 > 3 || age2 < 50) {
+        console.log(`$109 per day`);
+      } else if (age2 > 50) {
+        console.log(`10% off`);
+      }
+
+      // ==
+      if (2 == "2") {
+        console.log(`true`);
+      }
+
+      // === - the value and the data type must match
+      if (2 === "2") {
+        console.log(`True`);
+      } else {
+        console.log(`False`);
+      }
+
+      // && AND - both statement must be true
+      if (1 < 2 && 2 < 3) {
+        console.log(`true`);
+      }
+
+      // || OR
+      if (1 < 2 || 2 === 3) {
+        console.log(`true`);
+      }
+
+      // !
+      if (!false) {
+        console.log(`NOT True`);
+      }
+
+      // Switch
+
+      let age3 = "Ray";
+      switch (age3) {
+        case "Ray":
+          console.log(`Free`);
+          break;
+        case 18:
+          console.log(`$50`);
+          break;
+        case 60:
+          console.log(`$25`);
+          break;
+        default:
+          console.log(`$109`);
+      }
+    </script>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Activate tooltip
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>
