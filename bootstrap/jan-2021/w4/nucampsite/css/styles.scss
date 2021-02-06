@@ -1,3 +1,5 @@
+@import "modals";
+
 $color-primary: #3046c5;
 $color-secondary: #5637dd;
 $color-pale: #cec8ff;
@@ -94,18 +96,4 @@ a:hover {
   right: 0;
   bottom: 0;
   z-index: 100;
-}
-
-#reserveModal {
-  .modal-header {
-    background-color: $color-teal;
-    color: white;
-  }
-}
-
-#loginModal {
-  .modal-header {
-    background-color: $color-mid;
-    color: white;
-  }
 }

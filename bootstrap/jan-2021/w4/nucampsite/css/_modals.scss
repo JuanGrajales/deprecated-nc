@@ -1,0 +1,25 @@
+$color-mid: #901cad;
+$color-teal: #17a2b8;
+
+// function hello(userName){
+//     alert("hello " + userName)
+// }
+
+// hello("Jo")
+
+@mixin bg-color($color) {
+  background-color: $color;
+  color: white;
+}
+
+#reserveModal {
+  .modal-header {
+    @include bg-color(#17a2b8);
+  }
+}
+
+#loginModal {
+  .modal-header {
+    @include bg-color(#901cad);
+  }
+}
