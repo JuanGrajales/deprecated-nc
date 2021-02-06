@@ -26,13 +26,27 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <style>
+      div {
+        background-color: red;
+      }
+
+      .divC {
+        background-color: blue;
+      }
+
+      #divId {
+        background-color: pink;
+      }
+    </style>
+
     <script>
       // querySelector
-      // document.querySelector("div").innerText = "Hello";
+      document.querySelector("div").innerText = "Hello";
 
       // jQuery
       $(function () {
-        // $("div").text("Hola");
+        $(".divC").text("Hola");
       });
 
       // Sass...
@@ -49,6 +63,10 @@
       // 4. open curly braces after parenthesis
       // 5. add your code inside parenthesis
 
+      for (let i = 0; i < 10; i++) {
+        console.log("for loop i = " + i);
+      }
+
       // while loop
       // steps
       // 1. create variable to use as iterator
@@ -58,8 +76,18 @@
       // 5. open curly braces after parenthesis
       // 6. add your code inside parenthesis
       // 7. increment iterator
+      let i = 0;
+      while (i < 0) {
+        console.log("while loop i = " + i);
+        i++;
+      }
 
       // do while loop
+      let i2 = 0;
+      do {
+        console.log("do while loop i = " + i2);
+        i2++;
+      } while (i2 < 0);
 
       // arrays
       // syntax: keyword arrayName = [elements separated by commas]
