@@ -15,3 +15,19 @@ function positiveSum(arr) {
   console.log(sum);
   return sum;
 }
+
+// https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
+// Remove First and Last Character
+function removeChar(str) {
+  //You got this!
+  console.log(str);
+  //   Solution 1
+  //   return str.slice(1,-1)
+  //   Solution 2
+  return str.slice(1, str.length - 1);
+
+  //   indices of arrays and strings
+  //   slice method
+  //   length property of string
+  //   basic function syntax
+}

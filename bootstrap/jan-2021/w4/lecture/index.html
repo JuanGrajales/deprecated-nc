@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Week 3 Lecture</title>
+  </head>
+  <body>
+    <h1>Are you on Slack?</h1>
+    <!-- Send slide deck, announcement, schedule, GitHub Repo, calendly link   -->
+    <!-- GitHub - https://github.com/JuanGrajales/nc/tree/main/bootstrap/jan-2021/w4 
+    Calendly - https://calendly.com/juan-grajales/help -->
+    <br />
+    <br />
+
+    <div class="divC" id="divId">Hi</div>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <style>
+      div {
+        background-color: red;
+      }
+
+      .divC {
+        background-color: blue;
+      }
+
+      #divId {
+        background-color: pink;
+      }
+    </style>
+
+    <script>
+      // querySelector
+      document.querySelector("div").innerText = "Hello";
+
+      // jQuery
+      $(function () {
+        $(".divC").text("Hola");
+      });
+
+      // Sass...
+
+      // NPM scripts
+      // usemin documentation
+      // using && for scripts
+
+      // for loops
+      // steps
+      // 1. use keyword for
+      // 2. open parenthesis
+      // 3. inside parenthesis include the following: starting value, condition to continue  looping, change starting value
+      // 4. open curly braces after parenthesis
+      // 5. add your code inside parenthesis
+
+      for (let i = 0; i < 10; i++) {
+        console.log("for loop i = " + i);
+      }
+
+      // while loop
+      // steps
+      // 1. create variable to use as iterator
+      // 2. use keyword while
+      // 3. open parenthesis
+      // 4. inside parenthesis add condition to continue  looping
+      // 5. open curly braces after parenthesis
+      // 6. add your code inside parenthesis
+      // 7. increment iterator
+      let i = 0;
+      while (i < 0) {
+        console.log("while loop i = " + i);
+        i++;
+      }
+
+      // do while loop
+      let i2 = 0;
+      do {
+        console.log("do while loop i = " + i2);
+        i2++;
+      } while (i2 < 0);
+
+      // arrays
+      // syntax: keyword arrayName = [elements separated by commas]
+
+      // index of array element
+
+      // length property
+
+      // array methods
+      // let arr = [1,2,3,4]
+      // console.log(arr.indexOf(1));
+      // console.log(arr.includes(100));
+
+      // more methods: push, pop, shift, unshift, concat
+    </script>
+  </body>
+</html>
