@@ -243,7 +243,7 @@
           toggleBtns([resetBtn], true);
         } else {
           // if user clicks "No" run the else statement
-          if (currGuess === 100 || currGuess === 1) {
+          if (nGuesses >= 7 || currGuess === 100 || currGuess === 1) {
             instructions.textContent = `You lied -.-`;
             toggleBtns([resetBtn], true);
           } else {
