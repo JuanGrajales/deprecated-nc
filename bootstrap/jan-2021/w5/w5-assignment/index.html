@@ -242,8 +242,14 @@
           instructions.textContent = `I guessed your number in ${nGuesses} tries!`;
           toggleBtns([resetBtn], true);
         } else {
-          toggleBtns([higherBtn, lowerBtn], true);
-          instructions.textContent = `Is your number higher or lower than ${currGuess}?`;
+          // if user clicks "No" run the else statement
+          if (currGuess === 100 || currGuess === 1) {
+            instructions.textContent = `You lied -.-`;
+            toggleBtns([resetBtn], true);
+          } else {
+            toggleBtns([higherBtn, lowerBtn], true);
+            instructions.textContent = `Is your number higher or lower than ${currGuess}?`;
+          }
         }
       }
 
