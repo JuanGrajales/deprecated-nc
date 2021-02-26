@@ -9,10 +9,10 @@
   <body>
     <h1>Welcome!</h1>
 
-    <!-- Slack -->
-    <!-- GitHub -->
-    <!-- Slide Deck -->
-    <!-- Stand Up -->
+    <!-- Slack - join onea-2021-01-07-react and 3-react channels -->
+    <!-- GitHub - -->
+    <!-- Slide Deck will be sent through Slack at the beginning of every workshop -->
+    <!-- Stand Up - beginning of every workshop -->
     <script>
       // data types: String, Number, Boolean, Undefined, Null, Symbol, BigInt, Object
 
@@ -63,7 +63,7 @@
         return { message: name };
       }
 
-      // arrow function without return
+      // arrow function without explicit return
 
       function hi2(name) {
         return { message: name };
@@ -91,6 +91,7 @@
       //   console.log(v1.property1);
 
       // method chaining (split, reverse, join)
+      // reverse a string
 
       // inheritance
       class Vehicle {
@@ -116,6 +117,42 @@
 
       let vvehicle = new Vehicle();
       let bike = new Motorcycle();
+
+      // filter
+      let filterArr = [1, 1, 1, 2, 2, 2];
+      let evenArr = [];
+      for (let i = 0; i < filterArr.length; i++) {
+        if (filterArr[i] % 2 === 0) {
+          evenArr.push(filterArr[i]);
+        }
+      }
+
+      //   console.log(evenArr);
+
+      // map
+      let mapArr = [1, 1, 1, 2, 2, 2];
+      let doubleArr = [];
+      for (let i = 0; i < mapArr.length; i++) {
+        doubleArr.push(mapArr[i] * 2);
+      }
+
+      //   console.log(doubleArr);
+
+      // reduce
+      let reduceArr = [1, 1, 1, 2, 2, 2];
+      let sum = 0;
+      for (let i = 0; i < reduceArr.length; i++) {
+        sum += reduceArr[i];
+      }
+
+      //   console.log(sum);
+
+      //   let sum2 = reduceArr.reduce((accum, curr, index) => {
+      //     console.log(`Loop ${index} \naccum = ${accum} \ncurr = ${curr}`);
+      //     return accum + curr;
+      //   }, 0);
+
+      // array method that mutates original array?
 
       // retrospective
     </script>
