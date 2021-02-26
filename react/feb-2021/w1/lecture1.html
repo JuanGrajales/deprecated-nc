@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 1</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+
+    <!-- Slack - join onea-2021-01-07-react and 3-react channels -->
+    <!-- GitHub - -->
+    <!-- Slide Deck will be sent through Slack at the beginning of every workshop -->
+    <!-- Stand Up - beginning of every workshop -->
+    <script>
+      // data types: String, Number, Boolean, Undefined, Null, Symbol, BigInt, Object
+
+      // Object syntax
+      // step 1: choose keyword (const, let, var)
+      // step 2: create the object name (use camelCase)
+      // step 3: use assignment operator (=)
+      // step 4: open up curly braces {}
+      // step 5: add as many key/value pairs as you want, each key/value will be separated by a comma
+
+      // key/value pair syntax
+      // keyName : value
+      // value can be any data type (i.e. String, Number, Boolean, Undefined, Null, Symbol, BigInt, Object)
+
+      // methods vs functions
+
+      // calling a method
+      // objectName.methodName()
+
+      // when would you use an object instead of a regular variable or vice versa?
+
+      // example object
+      const bicycle = {
+        color: "blue",
+        electric: false,
+        start() {
+          console.log("You begin to pedal the bike.");
+        },
+      };
+
+      //   console.log(bicycle);
+      //   console.log(bicycle.color);
+      //   console.log(bicycle.start);
+      //   console.log(bicycle.start());
+
+      // how do you change the color of the bike?
+
+      // how do you change the start method?
+
+      // turn this into an arrow function
+      function hi() {
+        return "Hello";
+      }
+
+      // arrow function with explicit return
+
+      function hi2(name) {
+        return { message: name };
+      }
+
+      // arrow function without explicit return
+
+      function hi2(name) {
+        return { message: name };
+      }
+
+      // arrow function without return and without parenthesis for parameters
+
+      // class syntax
+      class ClassName {
+        constructor(param1, param2 = "hi") {
+          this.property1 = param1;
+          this.property2 = param2;
+          // make as many properties as you want
+        }
+
+        // add methods here
+        method1() {
+          // how can you print the properties of the object here?
+          console.log("method1");
+        }
+      }
+
+      let v1 = new ClassName("test");
+
+      //   console.log(v1.property1);
+
+      // method chaining (split, reverse, join)
+      // reverse a string
+
+      // inheritance
+      class Vehicle {
+        constructor(type = "Car") {
+          this.type = type;
+        }
+
+        getType() {
+          console.log(this.type);
+        }
+      }
+
+      class Motorcycle extends Vehicle {
+        constructor(type = "motorcycle", numWheels = 2) {
+          super(type);
+          this.numWheels = numWheels;
+        }
+
+        // getType() {
+        //   console.log("Motorcycle");
+        // }
+      }
+
+      let vvehicle = new Vehicle();
+      let bike = new Motorcycle();
+
+      // filter
+      let filterArr = [1, 1, 1, 2, 2, 2];
+      let evenArr = [];
+      for (let i = 0; i < filterArr.length; i++) {
+        if (filterArr[i] % 2 === 0) {
+          evenArr.push(filterArr[i]);
+        }
+      }
+
+      //   console.log(evenArr);
+
+      // map
+      let mapArr = [1, 1, 1, 2, 2, 2];
+      let doubleArr = [];
+      for (let i = 0; i < mapArr.length; i++) {
+        doubleArr.push(mapArr[i] * 2);
+      }
+
+      //   console.log(doubleArr);
+
+      // reduce
+      let reduceArr = [1, 1, 1, 2, 2, 2];
+      let sum = 0;
+      for (let i = 0; i < reduceArr.length; i++) {
+        sum += reduceArr[i];
+      }
+
+      //   console.log(sum);
+
+      //   let sum2 = reduceArr.reduce((accum, curr, index) => {
+      //     console.log(`Loop ${index} \naccum = ${accum} \ncurr = ${curr}`);
+      //     return accum + curr;
+      //   }, 0);
+
+      // array method that mutates original array?
+
+      // retrospective
+    </script>
+  </body>
+</html>
