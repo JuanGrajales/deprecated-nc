@@ -26,50 +26,56 @@
         // step 1: loop through the array of students (this.students)
         registerStudent(newStudent) {
           // solution 1
+          //   let duplicate = false;
           //   console.log("line 28 ", newStudent);
           //   this.students.map((existingStudent) => {
           //     console.log(existingStudent);
           //     if (newStudent.email === existingStudent.email) {
-          //       console.log(
-          //         `Student with email ${newStudent.email} is already registered`
-          //       );
-          //     } else {
-          //       this.students.push(newStudent);
-          //       console.log(`Successfully registered ${newStudent.email}`);
+          //       duplicate = true;
           //     }
           //   });
-          //   return this.students;
+
+          //   if (duplicate) {
+          //     // if duplicate === true
+          //     console.log(
+          //       `Student with email ${newStudent.email} is already registered`
+          //     );
+          //   } else {
+          //     this.students.push(newStudent);
+          //     console.log(`Successfully registered ${newStudent.email}`);
+          //   }
 
           // solution 2
           //   console.log("line 28 ", newStudent);
-          //   this.students.map((existingStudent) => {
-          //     console.log(existingStudent);
-          //     let studentsFound = this.students.filter(
-          //       (existingStudent) => newStudent.email === existingStudent.email
+          //   let studentsFound = this.students.filter(
+          //     (existingStudent) => newStudent.email === existingStudent.email
+          //   );
+          //   if (studentsFound.length > 0) {
+          //     console.log(
+          //       `Student with email ${newStudent.email} is already registered`
           //     );
-          //     if (studentsFound.length > 0) {
-          //       console.log(
-          //         `Student with email ${newStudent.email} is already registered`
-          //       );
-          //     } else {
-          //       this.students.push(newStudent);
-          //       console.log(`Successfully registered ${newStudent.email}`);
-          //     }
-          //   });
-          //   return this.students;
-          // }
+          //   } else {
+          //     this.students.push(newStudent);
+          //     console.log(`Successfully registered ${newStudent.email}`);
+          //   }
 
           // solution 3
+          let duplicate = false;
           for (let i = 0; i < this.students.length; i++) {
             if (this.students[i].email === newStudent.email) {
-              console.log(
-                `Student with email ${newStudent.email} is already registered`
-              );
-            } else {
-              this.students.push(newStudent);
-              console.log(`Successfully registered ${newStudent.email}`);
+              duplicate = true;
             }
           }
+          if (duplicate) {
+            // if duplicate === true
+            console.log(
+              `Student with email ${newStudent.email} is already registered`
+            );
+          } else {
+            this.students.push(newStudent);
+            console.log(`Successfully registered ${newStudent.email}`);
+          }
+
           return this.students;
         }
       }
@@ -96,6 +102,7 @@
       const s4 = new Student("Brian", "b@b.com", "react");
 
       johnsBootcamp.registerStudent(s4);
+      console.log(johnsBootcamp);
     </script>
   </body>
 </html>
