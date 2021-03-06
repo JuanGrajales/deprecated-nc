@@ -8,5 +8,14 @@
     "$ yarn add reactstrap@8.5.1 react-popper@1.3.6 bootstrap@4.5.2",
     "index.js - import 'bootstrap/dist/css/bootstrap.min.css';",
     "App.js - copy and paste the code provided"
+  ],
+  "E3 React Components Part 1": [
+    "in the root of your project run $ mkdir public/assets",
+    "download images.zip folder from nucampsite and move the images folder inside the assets folder",
+    "in the root of your projects run $ mkdir src/components",
+    "create Directory component inside components folder and add the syntax for a class component",
+    "display the array of campsite objects in the Directory component",
+    "App.js - display the Directory component under teh Navbar component",
+    "DirectoryComponent.js - add key prop to map"
   ]
 }
