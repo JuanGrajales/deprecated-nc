@@ -17,5 +17,18 @@
     "display the array of campsite objects in the Directory component",
     "App.js - display the Directory component under teh Navbar component",
     "DirectoryComponent.js - add key prop to map"
+  ],
+  "E4 React Components Part 2": [
+    "run $ mkdir src/shared",
+    "run $ code src/shared/campsites.js",
+    "campsites.js - cut the campsites array from DirectoryComponent.js file and paste it in this file as a const and export the const",
+    "App.js - import campsites.js array and set it to state",
+    "App.js = pass campsites to Directory component as a prop",
+    "DirectoryComponent.js - update the map so that it maps over this.props instead of this.state",
+    "DirectoryComponent.js - import reactstrap component and update map so that it return a card component",
+    "DirectoryComponent.js - add onclick event to Card component so that when it is clicked it displays that campsite at the bottom of the page",
+    "run $ yarn add typeface-lobster typeface-open-sans",
+    "index.js - import those the previously installed two packages",
+    "App.css - edit css"
   ]
 }
