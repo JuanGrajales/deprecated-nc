@@ -9,7 +9,19 @@ class CampsiteInfoComponent extends Component {
         </div>
       );
     } else {
-      return <div>No campsite selected yet {this.props.campsite}</div>;
+      return (
+        <div>
+          <ul>
+            <li>prop4 = {this.props.prop4}</li>
+            <li> {this.props.name}</li>
+            <li>
+              {this.props.infoObj.k1} {this.props.infoObj.k2}{" "}
+              {this.props.infoObj.k3}
+            </li>
+          </ul>
+          No campsite selected yet
+        </div>
+      );
     }
   }
 }

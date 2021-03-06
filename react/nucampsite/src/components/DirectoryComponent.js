@@ -14,6 +14,14 @@ class Directory extends Component {
     super(props);
     this.state = {
       selectedCampsite: null,
+      name: "Jonathan",
+      key3: "hi",
+      key4: "value",
+      infoObj: {
+        k1: "v1",
+        k2: "v2",
+        k3: "v3",
+      },
     };
   }
 
@@ -52,8 +60,16 @@ class Directory extends Component {
 
     return (
       <div className="container">
+        <h1>{this.state.name}</h1>
         <div className="row">{directory}</div>
-        <CampsiteInfoComponent campsite={this.state.selectedCampsite} />
+        <CampsiteInfoComponent
+          campsite={this.state.selectedCampsite}
+          prop2="value"
+          prop3="value 3"
+          prop4="value 4"
+          name={this.state.name}
+          infoObj={this.state.infoObj}
+        />
       </div>
     );
   }
