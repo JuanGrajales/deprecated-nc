@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Directory from "./components/Directory";
+
 const arr = [
   "Good Girls",
   "Breaking Bad",
@@ -21,7 +21,6 @@ class App extends Component {
       <div>
         <h1 className="hi">Welcome to React</h1>
         {/* passing props */}
-        <Directory tvShows={this.state.tvShows} />
       </div>
     );
   }
