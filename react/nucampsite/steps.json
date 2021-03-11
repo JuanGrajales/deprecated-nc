@@ -31,5 +31,6 @@
     "index.js - import those the previously installed two packages",
     "App.css - edit css"
   ],
-  "E5 Presentational and Container Components": [""]
+  "E5 Presentational and Container Components": [""],
+  "E6 Functional Components": [""]
 }
