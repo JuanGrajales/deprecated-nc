@@ -30,5 +30,6 @@
     "run $ yarn add typeface-lobster typeface-open-sans",
     "index.js - import those the previously installed two packages",
     "App.css - edit css"
-  ]
+  ],
+  "E5 Presentational and Container Components": [""]
 }
