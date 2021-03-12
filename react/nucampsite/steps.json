@@ -33,5 +33,6 @@
   ],
   "E5 Presentational and Container Components": [""],
   "E6 Functional Components": [""],
-  "E7 Header and Footer": [""]
+  "E7 Header and Footer": [""],
+  "E8 React Router": [""]
 }
