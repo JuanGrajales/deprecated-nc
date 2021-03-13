@@ -27,12 +27,12 @@ class App extends Component {
           {/* Redirect when you cannot find a url that matches a path */}
           {/* <Redirect to="/home" /> */}
 
-          <Route exact path="/profile" render={() => <Profile p1="v1" />} />
+          {/* <Route exact path="/profile" render={() => <Profile p1="v1" />} /> */}
 
           <Route
             exact
             path="/profile/:userid"
-            render={() => <Profile p1="v1" />}
+            render={(props) => <Profile p1="v1" />}
           />
 
           {/* <Route

@@ -6,33 +6,55 @@ let obj = {
   stack: "MERN",
 };
 
-let fname = obj.fname;
-let age = obj.age;
-let stack = obj.stack;
+// let fname = obj.fname;
+// let age = obj.age;
+// let stack = obj.stack;
 
 // let { fname } = obj;
 // let { age } = obj;
 // let { stack } = obj;
-// let { fname, age, stack } = obj;
-console.log(fname);
+let { fname, age, stack } = obj;
+// console.log(fname, age, stack);
 
-function func(objParam) {
-  console.log("property 1: " + objParam.fname);
-  console.log("property 2: " + objParam.age);
-  console.log("property 3: " + objParam.stack);
+function func({ fname, age, stack }) {
+  // console.log(objParam);
+  console.log("property 1: " + fname);
+  console.log("property 2: " + age);
+  console.log("property 3: " + stack);
 }
 
 func(obj);
 
+import { array } from "prop-types";
 // presentational vs container components
 // presentational components often will be funtional components
 // container components will often be class components since they need state for data
 
-// function component syntax
+// functional component syntax
+// VS Code extension: Reactjs Code Snippets
 // shortcut: rsc or rsf
+import React from "react";
+
+const lecture3 = () => {
+  return <div></div>;
+};
+
+export default lecture3;
+
+import React from "react";
+
+function lecture3(props) {
+  return <div></div>;
+}
+
+export default lecture3;
 
 // virtual DOM
 // keys for mapping
+
+arr.map((el) => {
+  return <div key="unique-id"></div>;
+});
 
 // <React.Fragment> and <>
 // both will not render in the DOM
@@ -42,7 +64,7 @@ func(obj);
 // this is necessary to have "multiple" pages in your SPA (Single Page Application)
 
 // React Router Setup
-// step 1: install react-router-dom by running the following command in the root of your app $ yarn add react-router-dom@version
+// step 1: install react-router-dom by running the following command in the root of your app (i.e. go to where your package.json is located) $ yarn add react-router-dom@version
 // note: is step 1 is done correctly you should see react-router-dom in the list of dependencies in package.json
 // step 2: in App.js import { BrowserRouter } from 'react-router-dom';
 // step 3: in App.js wrap the outer most HTML element with <BrowserRouter></BrowserRouter>
@@ -76,7 +98,7 @@ func(obj);
 // Link will allow users to navigate your application
 // the url must match the path of the component you want to display
 {
-  /* <Link to='/url'>Whatever</Link> */
+  /* <Link to='/urlShouldMatchARoutePath'>Whatever</Link> */
 }
 
 // React Router Parameters

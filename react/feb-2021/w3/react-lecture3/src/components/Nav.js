@@ -10,7 +10,9 @@ const Nav = () => {
       <li>
         <Link to="/profile">Profile</Link>
       </li>
-      <li>Page1</li>
+      <li>
+        <Link to="/profile/Fred">Profile with Param</Link>
+      </li>
       <li>Page2</li>
     </ul>
   );

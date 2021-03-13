@@ -1,3 +1,6 @@
+// Deck, announcement, schedule, GitHub link
+// https://github.com/JuanGrajales/nc/tree/main/react/feb-2021/w3
+
 // object destructuring
 
 let obj = {
@@ -14,7 +17,7 @@ let stack = obj.stack;
 // let { age } = obj;
 // let { stack } = obj;
 // let { fname, age, stack } = obj;
-console.log(fname);
+console.log("prop " + age);
 
 function func(objParam) {
   console.log("property 1: " + objParam.fname);
