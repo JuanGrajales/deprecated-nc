@@ -40,5 +40,6 @@
   "E11 Breadcrumbs": [""],
   "E12 Controlled Forms": [""],
   "E13 Controlled Form Validation": [""],
-  "E14 Uncontrolled Forms": [""]
+  "E14 Uncontrolled Forms": [""],
+  "E15 Intro to Redux": [""]
 }
