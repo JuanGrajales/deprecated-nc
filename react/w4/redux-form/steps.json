@@ -1,0 +1,46 @@
+{
+  "E1 Getting Started with React": [
+    "Install Yarn",
+    "In your terminal travel to the 3-React folder located inside teh Nucamp folder",
+    "Once you are in the 3-React folder run $ npx create-react-app@version nucampsite"
+  ],
+  "E2 Inital Configuration": [
+    "$ yarn add reactstrap@8.5.1 react-popper@1.3.6 bootstrap@4.5.2",
+    "index.js - import 'bootstrap/dist/css/bootstrap.min.css';",
+    "App.js - copy and paste the code provided"
+  ],
+  "E3 React Components Part 1": [
+    "in the root of your project run $ mkdir public/assets",
+    "download images.zip folder from nucampsite and move the images folder inside the assets folder",
+    "in the root of your projects run $ mkdir src/components",
+    "create Directory component inside components folder and add the syntax for a class component",
+    "display the array of campsite objects in the Directory component",
+    "App.js - display the Directory component under teh Navbar component",
+    "DirectoryComponent.js - add key prop to map"
+  ],
+  "E4 React Components Part 2": [
+    "run $ mkdir src/shared",
+    "run $ code src/shared/campsites.js",
+    "campsites.js - cut the campsites array from DirectoryComponent.js file and paste it in this file as a const and export the const",
+    "App.js - import campsites.js array and set it to state",
+    "App.js = pass campsites to Directory component as a prop",
+    "DirectoryComponent.js - update the map so that it maps over this.props instead of this.state",
+    "DirectoryComponent.js - import reactstrap component and update map so that it return a card component",
+    "DirectoryComponent.js - add onclick event to Card component so that when it is clicked it displays that campsite at the bottom of the page",
+    "run $ yarn add typeface-lobster typeface-open-sans",
+    "index.js - import those the previously installed two packages",
+    "App.css - edit css"
+  ],
+  "E5 Presentational and Container Components": [""],
+  "E6 Functional Components": [""],
+  "E7 Header and Footer": [""],
+  "E8 React Router": [""],
+  "E9 Adding to the Single Page App": [""],
+  "E10 React Router Parameters": [""],
+  "E11 Breadcrumbs": [""],
+  "E12 Controlled Forms": [""],
+  "E13 Controlled Form Validation": [""],
+  "E14 Uncontrolled Forms": [""],
+  "E15 Intro to Redux": [""],
+  "E16 React Redux Form": [""]
+}
