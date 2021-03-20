@@ -43,7 +43,7 @@ class ReduxForm extends Component {
   }
 }
 
-// prop of Control.text component
+// prop of Control component
 // validators={{
 //   required: (val) => val && val.length > 0,
 //   minLength: (val) => val && val.length > 2,

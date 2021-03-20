@@ -100,6 +100,7 @@ class CommentForm extends Component {
                   id="rating"
                   name="rating"
                   className="form-control"
+                  defaultValue="1"
                 >
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -116,6 +117,22 @@ class CommentForm extends Component {
                   name="author"
                   className="form-control"
                   placeholder="Your name"
+                  validators={{
+                    required: (val) => val && val.length > 0,
+                    minLength: (val) => val && val.length >= 2,
+                    maxLength: (val) => val && val.length <= 15,
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".author"
+                  show="touched"
+                  component="div"
+                  messages={{
+                    required: "Required",
+                    minLength: "Must be at least 2 characters",
+                    maxLength: "Must be 15 characters or less",
+                  }}
                 />
               </div>
               <div className="form-group">
