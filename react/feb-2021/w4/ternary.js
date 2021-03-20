@@ -1,6 +1,6 @@
 // if else review
 
-let age = 21;
+let age = 11;
 let price = 0;
 
 if (age >= 21) {
@@ -17,6 +17,7 @@ if (age >= 21) {
 // part 2: if the condition is true do something
 // price = 100
 // part 3: if the condition is false do something
+// price = 50
 
 // syntax
 // condition? "if true" : "if false"
@@ -24,3 +25,17 @@ if (age >= 21) {
 // example
 // the parenthesis are not necessary, for me this is added by prettier
 age >= 21 ? (price = 100) : (price = 50);
+
+console.log(price);
+
+// import React from "react";
+
+// const ternary = () => {
+//   return (
+//     <div>
+//       {userLoggedIn ? <button>Sign Out</button> : <button>Login</button>}
+//     </div>
+//   );
+// };
+
+// export default ternary;

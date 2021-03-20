@@ -9,6 +9,12 @@ class App extends Component {
       <div className="App">
         <h1>Week 4</h1>
         <ReduxForm />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <ModalExample />
       </div>
     );

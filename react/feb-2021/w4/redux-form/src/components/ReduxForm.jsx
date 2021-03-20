@@ -10,14 +10,31 @@ class ReduxForm extends Component {
       <div>
         <h1>React Redux Form</h1>
         {/* Reading documentation */}
-        <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+        <LocalForm onSubmit={(valuesObj) => this.handleSubmit(valuesObj)}>
           <div>
             <label htmlFor="matchIdForInput">Username</label>
             <Control.text
               model=".username"
               id="matchIdForInput"
               placeholder="username"
+              validators={{
+                required: (val) => val && val.length > 0,
+                minLength: (val) => val && val.length > 2,
+              }}
             />
+            <Errors
+              model=".username"
+              show="touched"
+              component="div"
+              messages={{
+                required: "Required",
+                minLength: "Must be at least 2 characters",
+              }}
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email</label>
+            <Control.text model=".email" placeholder="email" />
           </div>
           <button type="submit">Submit</button>
         </LocalForm>
@@ -32,17 +49,17 @@ class ReduxForm extends Component {
 //   minLength: (val) => val && val.length > 2,
 // }}
 
-{
-  /* <Errors
-    className="text-danger"
-    model=".username"
-    show="touched"
-    component="div"
-    messages={{
-      required: "Required",
-      minLength: "Must be at least 2 characters",
-    }}
-  />; */
-}
+// {
+//    <Errors
+//     className="text-danger"
+//     model=".username"
+//     show="touched"
+//     component="div"
+//     messages={{
+//       required: "Required",
+//       minLength: "Must be at least 2 characters",
+//     }}
+//   />;
+// }
 
 export default ReduxForm;
