@@ -48,5 +48,6 @@
   "E19 Redux Actions": [""],
   "E20 Redux Thunk": [""],
   "E21 React-Redux-Form Revisited": [""],
-  "E22 Json-Server": [""]
+  "E22 Json-Server": [""],
+  "E23 Fetch from Server": [""]
 }
