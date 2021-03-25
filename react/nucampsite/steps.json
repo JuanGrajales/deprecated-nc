@@ -52,5 +52,6 @@
   "E23 Fetch from Server": [""],
   "E24 Fetch Handling Errors": [""],
   "E25 Fetch Post Comment": [""],
-  "E26 React Transitions": [""]
+  "E26 React Transitions": [""],
+  "E27 React Animation Components": [""]
 }
