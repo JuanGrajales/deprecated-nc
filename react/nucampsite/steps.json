@@ -44,5 +44,6 @@
   "E15 Intro to Redux": [""],
   "E16 React Redux Form": [""],
   "E17 React Redux Form Validation": [""],
-  "E18 Splitting and Combining Reducers": [""]
+  "E18 Splitting and Combining Reducers": [""],
+  "E19 Redux Actions": [""]
 }
