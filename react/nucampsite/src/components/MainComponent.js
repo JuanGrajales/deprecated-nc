@@ -73,8 +73,8 @@ class Main extends Component {
     return (
       <div>
         <Header />
-        <Test />
-        {/* <Switch>
+        {/* <Test /> */}
+        <Switch>
           <Route path="/home" component={HomePage} />
           <Route
             exact
@@ -95,7 +95,7 @@ class Main extends Component {
             render={() => <About partners={this.props.partners} />}
           />
           <Redirect to="/home" />
-        </Switch> */}
+        </Switch>
         <Footer />
       </div>
     );
