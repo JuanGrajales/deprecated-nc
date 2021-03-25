@@ -42,5 +42,7 @@
   "E13 Controlled Form Validation": [""],
   "E14 Uncontrolled Forms": [""],
   "E15 Intro to Redux": [""],
-  "E16 React Redux Form": [""]
+  "E16 React Redux Form": [""],
+  "E17 React Redux Form Validation": [""],
+  "E18 Splitting and Combining Reducers": [""]
 }
