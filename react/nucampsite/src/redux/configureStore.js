@@ -16,11 +16,10 @@ export const ConfigureStore = () => {
       partners: Partners,
       promotions: Promotions,
       ...createForms({
-          feedbackForm: InitialFeedback
-      })
-  }),
-      applyMiddleware(thunk, logger)
-    )
+        feedbackForm: InitialFeedback,
+      }),
+    }),
+    applyMiddleware(thunk, logger)
   );
 
   return store;

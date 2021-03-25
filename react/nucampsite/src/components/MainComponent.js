@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import Directory from "./DirectoryComponent";
+import CampsiteInfo from "./CampsiteInfoComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import Contact from "./ContactComponent";
-import CampsiteInfo from "./CampsiteInfoComponent";
 import About from "./AboutComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { addComment, fetchCampsites } from "../redux/ActionCreators";
 import { actions } from "react-redux-form";
+import { addComment, fetchCampsites } from "../redux/ActionCreators";
+import Test from "./Test";
 
 const mapStateToProps = (state) => {
   return {
@@ -72,7 +73,8 @@ class Main extends Component {
     return (
       <div>
         <Header />
-        <Switch>
+        <Test />
+        {/* <Switch>
           <Route path="/home" component={HomePage} />
           <Route
             exact
@@ -93,7 +95,7 @@ class Main extends Component {
             render={() => <About partners={this.props.partners} />}
           />
           <Redirect to="/home" />
-        </Switch>
+        </Switch> */}
         <Footer />
       </div>
     );

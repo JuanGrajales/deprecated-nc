@@ -6,13 +6,14 @@ import {
   CardBody,
   Breadcrumb,
   BreadcrumbItem,
+  Button,
   Modal,
   ModalHeader,
   ModalBody,
+  Label,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import Button from "reactstrap/lib/Button";
-import { LocalForm, Control, Errors } from "react-redux-form";
+import { Control, LocalForm, Errors } from "react-redux-form";
 import { Loading } from "./LoadingComponent";
 
 function RenderCampsite({ campsite }) {
@@ -29,36 +30,31 @@ function RenderCampsite({ campsite }) {
 }
 
 function RenderComments({ comments, addComment, campsiteId }) {
-  console.log(comments);
   if (comments) {
-    // comments !== null
     return (
       <div className="col-md-5 m-1">
         <h4>Comments</h4>
         {comments.map((comment) => {
           return (
-            <div>
-              <p>{comment.text}</p>
-              -- {comment.author}{" "}
-              {new Intl.DateTimeFormat("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "2-digit",
-              }).format(new Date(Date.parse(comment.date)))}
+            <div key={comment.id}>
+              <p>
+                {comment.text}
+                <br />
+                -- {comment.author},{" "}
+                {new Intl.DateTimeFormat("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "2-digit",
+                }).format(new Date(Date.parse(comment.date)))}
+              </p>
             </div>
           );
         })}
         <CommentForm campsiteId={campsiteId} addComment={addComment} />
       </div>
     );
-  } else {
-    return (
-      <div>
-        No comments available
-        <CommentForm />
-      </div>
-    );
   }
+  return <div />;
 }
 
 class CommentForm extends Component {
@@ -67,13 +63,15 @@ class CommentForm extends Component {
     this.state = {
       isModalOpen: false,
     };
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  toggleModal = () => {
+  toggleModal() {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
     });
-  };
+  }
 
   handleSubmit(values) {
     this.toggleModal();
@@ -88,44 +86,38 @@ class CommentForm extends Component {
   render() {
     return (
       <div>
-        <Button
-          onClick={this.toggleModal}
-          className="fa fa-pencil fa-lg"
-          outline
-        >
-          Submit Comment
+        <Button outline onClick={this.toggleModal}>
+          <i className="fa fa-pencil fa-lg" /> Submit Comment
         </Button>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
           <ModalBody>
-            <LocalForm onSubmit={(valuesObj) => this.handleSubmit(valuesObj)}>
+            <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
               <div className="form-group">
-                <label htmlFor="rating">Rating</label>
+                <Label htmlFor="rating">Rating</Label>
                 <Control.select
                   model=".rating"
                   id="rating"
                   name="rating"
                   className="form-control"
-                  defaultValue="1"
                 >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
                 </Control.select>
               </div>
               <div className="form-group">
-                <label htmlFor="author">Your name</label>
+                <Label htmlFor="author">Your Name</Label>
                 <Control.text
                   model=".author"
                   id="author"
                   name="author"
+                  placeholder="Your Name"
                   className="form-control"
-                  placeholder="Your name"
                   validators={{
-                    required: (val) => val && val.length > 0,
-                    minLength: (val) => val && val.length >= 2,
+                    minLength: (val) => val && val.length > 2,
                     maxLength: (val) => val && val.length <= 15,
                   }}
                 />
@@ -135,20 +127,19 @@ class CommentForm extends Component {
                   show="touched"
                   component="div"
                   messages={{
-                    required: "Required",
                     minLength: "Must be at least 2 characters",
                     maxLength: "Must be 15 characters or less",
                   }}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="comment">Comment</label>
+                <Label htmlFor="text">Comment</Label>
                 <Control.textarea
-                  model=".comment"
-                  id="comment"
-                  name="comment"
-                  className="form-control"
+                  model=".text"
+                  id="text"
+                  name="text"
                   rows="6"
+                  className="form-control"
                 />
               </div>
               <Button type="submit" color="primary">
@@ -200,7 +191,11 @@ function CampsiteInfo(props) {
         </div>
         <div className="row">
           <RenderCampsite campsite={props.campsite} />
-          <RenderComments comments={props.comments} />
+          <RenderComments
+            comments={props.comments}
+            addComment={props.addComment}
+            campsiteId={props.campsite.id}
+          />
         </div>
       </div>
     );

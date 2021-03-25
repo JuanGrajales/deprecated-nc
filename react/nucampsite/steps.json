@@ -47,5 +47,6 @@
   "E18 Splitting and Combining Reducers": [""],
   "E19 Redux Actions": [""],
   "E20 Redux Thunk": [""],
-  "E21 React-Redux-Form Revisited": [""]
+  "E21 React-Redux-Form Revisited": [""],
+  "E22 Json-Server": [""]
 }
