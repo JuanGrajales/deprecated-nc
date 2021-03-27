@@ -6,7 +6,7 @@ class Child extends Component {
     return (
       <div>
         <h3>Child</h3>
-        <GrandChild />
+        <GrandChild p1={this.props.p1} />
       </div>
     );
   }

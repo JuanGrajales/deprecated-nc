@@ -6,7 +6,7 @@ class Parent extends Component {
     return (
       <div>
         <h2>Parent</h2>
-        <Child />
+        <Child p1={this.props.p1} />
       </div>
     );
   }

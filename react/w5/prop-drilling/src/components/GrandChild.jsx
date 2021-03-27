@@ -5,7 +5,7 @@ class GrandChild extends Component {
     return (
       <div>
         <h4>GrandChild</h4>
-        <p>Prop: {this.props.prop1}</p>
+        <p>Prop: {this.props.p1}</p>
       </div>
     );
   }
