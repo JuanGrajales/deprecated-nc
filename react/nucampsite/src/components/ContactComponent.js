@@ -36,11 +36,12 @@ class Contact extends Component {
         email: false,
       },
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(values) {
-    alert("handlesubmit " + JSON.stringify(values));
-    this.props.postFeedback(JSON.stringify(values));
+    this.props.postFeedback(values);
     this.props.resetFeedbackForm();
   }
 

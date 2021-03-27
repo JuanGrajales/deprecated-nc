@@ -201,7 +201,6 @@ export const addPartners = (partners) => ({
 });
 
 export const postFeedback = (feedback) => () => {
-  alert("postfeedback function" + JSON.stringify(feedback));
   return fetch(baseUrl + "feedback", {
     method: "POST",
     body: JSON.stringify(feedback),
@@ -227,11 +226,11 @@ export const postFeedback = (feedback) => () => {
     )
     .then((response) => response.json())
     .then((response) => {
-      console.log("Successfully saved feedback" + response);
-      alert("You're feedback" + JSON.stringify(response));
+      console.log("Feedback: ", response);
+      alert("Thank you for your feedback!\n" + JSON.stringify(response));
     })
     .catch((error) => {
-      console.log("post feedback", error.message);
-      alert("Your comment could not be posted\nError: " + error.message);
+      console.log("Feedback: ", error.message);
+      alert("Your feedback could not be posted\nError: " + error.message);
     });
 };
