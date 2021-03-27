@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { Campsites } from "./campsites";
 import { Comments } from "./comments";
 import { Partners } from "./partners";
@@ -19,7 +19,11 @@ export const ConfigureStore = () => {
         feedbackForm: InitialFeedback,
       }),
     }),
-    applyMiddleware(thunk, logger)
+    compose(
+      applyMiddleware(thunk, logger),
+      window.__REDUX_DEVTOOLS_EXTENSION__ &&
+        window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
   );
 
   return store;
